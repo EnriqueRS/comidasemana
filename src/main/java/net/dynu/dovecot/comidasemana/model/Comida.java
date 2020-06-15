@@ -13,6 +13,8 @@ public class Comida {
 	private String name;
 	private String image;
 	private String url;
+	
+	
 	public Integer getId() {
 		return id;
 	}

@@ -1,18 +1,16 @@
 package net.dynu.dovecot.comidasemana.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Comida {
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String name;
 	private String image;
 	private String url;
+	private String note;
 	
 	
 	public Integer getId() {
@@ -39,4 +37,11 @@ public class Comida {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+	public String getNote() {
+		return note;
+	}
+	public void setNote(String note) {
+		this.note = note;
+	}
+	
 }

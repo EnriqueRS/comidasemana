@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Comida de la semana</title>
+<!-- Bootstrap core CSS -->
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+<link th:href="@{/bootstrap/css/sticky-footer-navbar.css}"
+	rel="stylesheet">
+</head>
+<body>
+	<h4 class="card-header">
+		Semana <strong th:text="${week}" /> del año
+	</h4>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th scope="col">Lunes</th>
+				<th scope="col">Martes</th>
+				<th scope="col">Miércoles</th>
+				<th scope="col">Jueves</th>
+				<th scope="col">Viernes</th>
+				<th scope="col">Sábado</th>
+				<th scope="col">Domingo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th th:if="${semanaObj != null}" scope="row">
+					<div class="card" style="width: 18rem;">
+						<img th:src="${semanaObj?.monday}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 th:text="${semanaObj?.monday}" class="card-title"></h5>
+							<p th:text="${semanaObj?.monday}" class="card-text"></p>
+							<a th:href="${semanaObj?.monday}" class="btn btn-primary">Ir a
+								receta</a>
+						</div>
+					</div>
+				</th>
+				<th th:if="${semanaObj != null}" scope="row">
+					<div class="card" style="width: 18rem;">
+						<img th:src="${semanaObj?.monday}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 th:text="${semanaObj?.monday}" class="card-title"></h5>
+							<p th:text="${semanaObj?.monday}" class="card-text"></p>
+							<a th:href="${semanaObj?.monday}" class="btn btn-primary">Ir a
+								receta</a>
+						</div>
+					</div>
+				</th>
+				<th th:if="${semanaObj != null}" scope="row">
+					<div class="card" style="width: 18rem;">
+						<img th:src="${semanaObj?.monday}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 th:text="${semanaObj?.monday}" class="card-title"></h5>
+							<p th:text="${semanaObj?.monday}" class="card-text"></p>
+							<a th:href="${semanaObj?.monday}" class="btn btn-primary">Ir a
+								receta</a>
+						</div>
+					</div>
+				</th>
+				<th th:if="${semanaObj != null}" scope="row">
+					<div class="card" style="width: 18rem;">
+						<img th:src="${semanaObj?.monday}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 th:text="${semanaObj?.monday}" class="card-title"></h5>
+							<p th:text="${semanaObj?.monday}" class="card-text"></p>
+							<a th:href="${semanaObj?.monday}" class="btn btn-primary">Ir a
+								receta</a>
+						</div>
+					</div>
+				</th>
+				<th th:if="${semanaObj != null}" scope="row">
+					<div class="card" style="width: 18rem;">
+						<img th:src="${semanaObj?.monday}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 th:text="${semanaObj?.monday}" class="card-title"></h5>
+							<p th:text="${semanaObj?.monday}" class="card-text"></p>
+							<a th:href="${semanaObj?.monday}" class="btn btn-primary">Ir a
+								receta</a>
+						</div>
+					</div>
+				</th>
+				<th th:if="${semanaObj != null}" scope="row">
+					<div class="card" style="width: 18rem;">
+						<img th:src="${semanaObj?.monday}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 th:text="${semanaObj?.monday}" class="card-title"></h5>
+							<p th:text="${semanaObj?.monday}" class="card-text"></p>
+							<a th:href="${semanaObj?.monday}" class="btn btn-primary">Ir a
+								receta</a>
+						</div>
+					</div>
+				</th>
+				<th th:if="${semanaObj != null}" scope="row">
+					<div class="card" style="width: 18rem;">
+						<img th:src="${semanaObj?.monday}" class="card-img-top" alt="...">
+						<div class="card-body">
+							<h5 th:text="${semanaObj?.monday}" class="card-title"></h5>
+							<p th:text="${semanaObj?.monday}" class="card-text"></p>
+							<a th:href="${semanaObj?.monday}" class="btn btn-primary">Ir a
+								receta</a>
+						</div>
+					</div>
+				</th>
+			</tr>
+			<tr>
+				<th scope="row"><select title="Seleccionar"
+					class="selectpicker">
+						<option>Seleccionar</option>
+						<option th:each="tmpComida: ${comidas}"
+							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
+				</select></th>
+				<th scope="row"><select title="Seleccionar"
+					class="selectpicker">
+						<option>Seleccionar</option>
+						<option th:each="tmpComida: ${comidas}"
+							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
+				</select></th>
+				<th scope="row"><select title="Seleccionar"
+					class="selectpicker">
+						<option>Seleccionar</option>
+						<option th:each="tmpComida: ${comidas}"
+							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
+				</select></th>
+				<th scope="row"><select title="Seleccionar"
+					class="selectpicker">
+						<option>Seleccionar</option>
+						<option th:each="tmpComida: ${comidas}"
+							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
+				</select></th>
+				<th scope="row"><select title="Seleccionar"
+					class="selectpicker">
+						<option>Seleccionar</option>
+						<option th:each="tmpComida: ${comidas}"
+							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
+				</select></th>
+				<th scope="row"><select title="Seleccionar"
+					class="selectpicker">
+						<option>Seleccionar</option>
+						<option th:each="tmpComida: ${comidas}"
+							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
+				</select></th>
+				<th scope="row"><select title="Seleccionar"
+					class="selectpicker">
+						<option>Seleccionar</option>
+						<option th:each="tmpComida: ${comidas}"
+							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
+				</select></th>
+			</tr>
+		</tbody>
+	</table>
+
+	<div class="row">
+		<div th:each="tmpComida: ${comidas}"
+			class="col-md-6 col-lg-5 col-xl-3 py-2">
+			<div class="card" style="width: 18rem;">
+				<img th:src="${tmpComida.image}" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 th:text="${tmpComida.name}" class="card-title"></h5>
+					<p th:text="${tmpComida.note}" class="card-text"></p>
+					<a th:href="${tmpComida.url}" class="btn btn-primary">Ir a
+						receta</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>

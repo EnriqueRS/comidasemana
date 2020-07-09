@@ -107,54 +107,51 @@
 				</th>
 			</tr>
 			<tr>
+				<th scope="row">
+					<form th:action="@{/comida/select}" method="post">
+						<select title="Seleccionar" class="selectpicker" name="id" id="id">
+							<option>Seleccionar</option>
+							<option th:each="tmpComida: ${comidas}"
+								th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
+						</select>
+						<button type="submit" class="btn btn-primary">Seleccionar</button>
+					</form>
+				</th>
 				<th scope="row"><select title="Seleccionar"
 					class="selectpicker">
 						<option>Seleccionar</option>
 						<option th:each="tmpComida: ${comidas}"
 							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
-						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
 				</select></th>
 				<th scope="row"><select title="Seleccionar"
 					class="selectpicker">
 						<option>Seleccionar</option>
 						<option th:each="tmpComida: ${comidas}"
 							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
-						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
 				</select></th>
 				<th scope="row"><select title="Seleccionar"
 					class="selectpicker">
 						<option>Seleccionar</option>
 						<option th:each="tmpComida: ${comidas}"
 							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
-						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
 				</select></th>
 				<th scope="row"><select title="Seleccionar"
 					class="selectpicker">
 						<option>Seleccionar</option>
 						<option th:each="tmpComida: ${comidas}"
 							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
-						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
 				</select></th>
 				<th scope="row"><select title="Seleccionar"
 					class="selectpicker">
 						<option>Seleccionar</option>
 						<option th:each="tmpComida: ${comidas}"
 							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
-						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
 				</select></th>
 				<th scope="row"><select title="Seleccionar"
 					class="selectpicker">
 						<option>Seleccionar</option>
 						<option th:each="tmpComida: ${comidas}"
 							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
-						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
-				</select></th>
-				<th scope="row"><select title="Seleccionar"
-					class="selectpicker">
-						<option>Seleccionar</option>
-						<option th:each="tmpComida: ${comidas}"
-							th:text="${tmpComida.name}" th:value="${tmpComida.id}" />
-						<!-- 						<option data-thumbnail="images/icon-chrome.png">Chrome</option> -->
 				</select></th>
 			</tr>
 		</tbody>

@@ -1,7 +1,10 @@
 package net.dynu.dovecot.comidasemana.controller;
 
-import java.util.List;
-import java.util.Optional;
+import net.dynu.dovecot.comidasemana.domain.Utils;
+import net.dynu.dovecot.comidasemana.model.Comida;
+import net.dynu.dovecot.comidasemana.model.Semana;
+import net.dynu.dovecot.comidasemana.repository.ComidaRepository;
+import net.dynu.dovecot.comidasemana.repository.SemanaRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,11 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import net.dynu.dovecot.comidasemana.domain.Utils;
-import net.dynu.dovecot.comidasemana.model.Comida;
-import net.dynu.dovecot.comidasemana.model.Semana;
-import net.dynu.dovecot.comidasemana.repository.ComidaRepository;
-import net.dynu.dovecot.comidasemana.repository.SemanaRepository;
+import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/comida")
@@ -42,6 +42,12 @@ public class MainController {
 		List<Comida> comidas = (List<Comida>) comidaRepository.findAll();
 		model.addAttribute("comidas", comidas);
 		model.addAttribute("week", currentWeek);
+		return "comida/home";
+	}
+	
+	@PostMapping("/select")
+	public String selectComida(@RequestParam("id") String id) {
+		System.out.println(id);
 		return "comida/home";
 	}
 
